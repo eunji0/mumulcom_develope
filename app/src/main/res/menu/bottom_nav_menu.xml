@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/main_btm_home_selector"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:title="홈"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/scrapFragment"
+        android:icon="@drawable/main_btm_scrap_selector"
+        app:showAsAction="always"
+        android:title="스크랩" />
+    <item
+        android:id="@+id/questionFragment"
+        android:icon="@drawable/main_btm_question_selector"
+        app:showAsAction="always"
+        android:title="질문" />
+    <item
+        android:id="@+id/alarmFragment"
+        android:icon="@drawable/main_btm_alarm_selector"
+        app:showAsAction="always"
+        android:title="알림" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/main_btm_my_selector"
+        app:showAsAction="always"
+        android:title="프로필" />
+
+</menu>

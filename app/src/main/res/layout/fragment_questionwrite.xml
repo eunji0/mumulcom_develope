@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/questionwriteOutIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/btn_actionbar_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <Button
+                android:id="@+id/questionwriteImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:backgroundTint="#FFA03C"
+                android:hint="사진을 첨부해주세요."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/questionwriteOutIv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/questionwriteOutIv"
+                />
+
+            <LinearLayout
+                android:id="@+id/questionwriteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/questionwriteImage"
+                app:layout_constraintStart_toStartOf="@id/questionwriteImage"
+                app:layout_constraintEnd_toEndOf="@id/questionwriteImage">
+
+                <TextView
+                    android:id="@+id/questionwriteTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="제목"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:paddingStart="25dp"/>
+
+                <EditText
+                    android:id="@+id/questionwriteTitleTextEt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/custom_button"
+                    android:hint=" 제목을 입력해주세요."
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionwriteErrorCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/questionwriteTitle">
+
+                <TextView
+                    android:id="@+id/questionwriteErrorCodeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="오류 코드 첨부"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="25dp"/>
+
+                <EditText
+                    android:id="@+id/questionwriteErrorCodeTextEt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/custom_button"
+                    android:hint=" 이미지코드나 복사본을 입력해주세요.\n 답변에 큰 도움이 됩니다."
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionwriteStopPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/questionwriteErrorCode">
+
+                <TextView
+                    android:id="@+id/questionwriteStopPartTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="현재 막힌 부분은 어디인가요?"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="25dp"/>
+
+                <EditText
+                    android:id="@+id/questionwriteStopPartTextEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/custom_button"
+                    android:hint=" 간단하게라도 적어주세요.\n 답변에 큰 도움이 됩니다."
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/questionwriteCodingLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/questionwriteStopPart">
+
+                <TextView
+                    android:id="@+id/questionwriteCodingLevelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="현재 나의 코딩 실력은?"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="25dp"/>
+
+                <EditText
+                    android:id="@+id/questionwriteCodingLevelTextEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/custom_button"
+                    android:hint=" ex)저는 자바로 프로그래밍을 해봤지만\n 스프링 부분은 처음이라 모릅니다."
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/questionwriteQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/questionwriteQuestionBtn"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="+ 질문하기"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFA03C"
+            />
+    </LinearLayout>
+</LinearLayout>
